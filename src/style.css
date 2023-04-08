@@ -69,3 +69,54 @@ a {
   font-size: 0.8rem;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .headerLinks {
+    display: none;
+  }
+
+  .headerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  }
+
+  .dropDownIcon {
+    order: 1;
+    padding-left: 3vw;
+  }
+
+  .title {
+    order: 2;
+  }
+
+  .dropDownContainer {
+    height: 50vh;
+    width: 30vw;
+    background-color: burlywood;
+    opacity: 0.95;
+    padding-top: 5vh;
+    font-size: 1.5rem;
+  }
+
+  .dropDownContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5vh;
+  }
+
+  .dropDownContainer ul,
+  .sublists {
+    list-style: none;
+    margin: 0;
+  }
+
+  .sublists {
+    padding: 0;
+    gap: 4px !important;
+  }
+
+  .sublists li {
+    font-size: 0.9rem;
+  }
+}

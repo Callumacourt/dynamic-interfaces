@@ -1,5 +1,6 @@
 export default function dropMenu(parentElement, dropDown) {
   let timer;
+  dropDown.classList.add('invisible');
   parentElement.addEventListener('mouseover', () => {
     clearTimeout(timer);
     dropDown.classList.remove('invisible');
