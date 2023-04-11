@@ -1,12 +1,27 @@
-import menuImg from './menu.png';
+import menuImg from './images/menu.png';
 
 export default function styleMobileViewport(header) {
-  if (window.innerWidth > 900) return;
-
   const menuIcon = new Image();
   menuIcon.src = menuImg;
   menuIcon.classList.add('dropDownIcon');
-  header.appendChild(menuIcon);
+
+  const manageMenuIcon = () => {
+    const dropDown = document.querySelector('.dropDownContainer');
+
+    if (window.innerWidth > 900) {
+      if (header.contains(menuIcon)) {
+        header.removeChild(menuIcon);
+      }
+      if (dropDown) {
+        document.body.removeChild(dropDown);
+      }
+    } else if (!header.contains(menuIcon)) {
+      header.appendChild(menuIcon);
+    }
+  };
+
+  manageMenuIcon();
+  window.addEventListener('resize', manageMenuIcon);
 
   menuIcon.addEventListener('click', () => {
     const dropDown = document.querySelector('.dropDownContainer');

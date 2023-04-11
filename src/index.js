@@ -1,6 +1,8 @@
 import './style.css';
 import dropDown from './dropDownMenu';
-import mobileViewportStyler from './checkViewport';
+import styleMobileViewport from './checkViewport';
+import initCarousel from './imageCarousel';
+import initImagNav from './initImageNav';
 
 const headerWrapper = document.querySelector('.headerWrapper');
 const aboutUsLink = document.querySelector('.about');
@@ -8,7 +10,9 @@ const saleLink = document.querySelector('.sale');
 const saleDropDown = document.querySelector('.saleDropDown');
 const aboutUsDropDown = document.querySelector('.aboutUsDropDown');
 
-mobileViewportStyler(headerWrapper);
+window.addEventListener('resize', styleMobileViewport(headerWrapper));
+initCarousel();
+initImagNav();
 
 dropDown(aboutUsLink, aboutUsDropDown);
 dropDown(saleLink, saleDropDown);

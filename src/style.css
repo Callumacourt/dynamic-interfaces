@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('piano.jpg');
+  background-image: url('./images/piano.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,8 +57,7 @@ a {
   list-style: none;
   border-radius: 5px;
   font-style: italic;
-  max-height: 8vh;
-  min-height: 8.5vh;
+  height: 5vh;
 }
 
 .saleDropDown {
@@ -68,6 +67,82 @@ a {
 .newTag {
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carouselContainer {
+  width: 37.7vw;
+  height: 60vh;
+  opacity: 0.9;
+  background-color: whitesmoke;
+  grid-column-start: 2;
+  overflow: hidden;
+  position: relative;
+  order: -1;
+}
+
+.imageContainer {
+  width: 201vw;
+  display: flex;
+  transition: transform 0.3s ease-out;
+  grid-column-start: 2;
+}
+
+.imgWrapper {
+  padding: 20px;
+}
+
+.imgWrapper button {
+  width: 20px;
+  margin-left: 2px;
+  height: 20px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonWrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer > img {
+  translate: (50px, 0);
+}
+
+.carouselImg {
+  height: 55vh;
+  width: 35vw;
+}
+
+.previous,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: lightgray;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.previous {
+  left: 10px;
+}
+
+.nextBtn {
+  right: 10px;
 }
 
 @media (max-width: 768px) {
