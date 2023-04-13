@@ -94,6 +94,10 @@ a {
   grid-column-start: 2;
 }
 
+.active {
+  background-color: blue;
+}
+
 .imgWrapper {
   padding: 20px;
 }

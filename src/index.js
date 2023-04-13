@@ -12,7 +12,6 @@ const aboutUsDropDown = document.querySelector('.aboutUsDropDown');
 
 window.addEventListener('resize', styleMobileViewport(headerWrapper));
 initCarousel();
-initImagNav();
 
 dropDown(aboutUsLink, aboutUsDropDown);
 dropDown(saleLink, saleDropDown);
