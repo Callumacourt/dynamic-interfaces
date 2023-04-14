@@ -2,7 +2,6 @@ import './style.css';
 import dropDown from './dropDownMenu';
 import styleMobileViewport from './checkViewport';
 import initCarousel from './imageCarousel';
-import initImagNav from './initImageNav';
 
 const headerWrapper = document.querySelector('.headerWrapper');
 const aboutUsLink = document.querySelector('.about');

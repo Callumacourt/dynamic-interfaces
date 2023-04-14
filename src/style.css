@@ -73,13 +73,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 90vh;
 }
 
 .carouselContainer {
-  width: 37.7vw;
-  height: 60vh;
-  opacity: 0.9;
+  width: 44.1vw;
+  height: 70vh;
+  opacity: 0.95;
   background-color: whitesmoke;
   grid-column-start: 2;
   overflow: hidden;
@@ -88,35 +88,44 @@ a {
 }
 
 .imageContainer {
-  width: 201vw;
+  width: 100%;
   display: flex;
   transition: transform 0.3s ease-out;
   grid-column-start: 2;
 }
 
 .active {
-  background-color: blue;
+  background-color: lightblue !important;
 }
 
 .imgWrapper {
   padding: 20px;
+  background-color: rgb(115, 32, 4);
 }
 
 .imgWrapper button {
-  width: 20px;
-  margin-left: 2px;
-  height: 20px;
+  width: 18px;
+  margin-left: 3px;
+  height: 18px;
+}
+
+.imgWrapper button:hover {
+  cursor: pointer;
 }
 
 .buttonWrapper {
   display: flex;
   justify-content: center;
+  height: 30px;
 }
 
 .buttonWrapper button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: white;
+  border-radius: 100%;
 }
 
 .imageContainer > img {
@@ -124,21 +133,25 @@ a {
 }
 
 .carouselImg {
-  height: 55vh;
-  width: 35vw;
+  height: 65vh;
+  width: 42vw;
 }
 
-.previous,
+.prevBtn,
 .nextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: lightgray;
+  background-color: black;
+  font-weight: bold;
+  opacity: 0.7;
+  color: white;
   border: none;
   font-size: 1.2rem;
   padding: 10px 15px;
   cursor: pointer;
   z-index: 1;
+  border-radius: 100%;
 }
 
 .previous {
@@ -152,6 +165,24 @@ a {
 @media (max-width: 768px) {
   .headerLinks {
     display: none;
+  }
+
+  .carouselContainer {
+    width: 95vw;
+    height: 70vh;
+  }
+
+  .imgWrapper {
+    padding: 10px;
+  }
+
+  .carouselImg {
+    width: 89vw;
+  }
+
+  .buttonWrapper button {
+    height: 4.4vmin;
+    width: 4.4vmin;
   }
 
   .headerWrapper {
@@ -170,17 +201,23 @@ a {
   }
 
   .dropDownContainer {
-    height: 50vh;
-    width: 30vw;
+    top: 10vh;
+    height: 80vh;
+    width: 100%;
     background-color: burlywood;
     opacity: 0.95;
     padding-top: 5vh;
     font-size: 1.5rem;
+    position: absolute;
   }
 
   .dropDownContainer ul {
     display: flex;
+    height: 100%;
     flex-direction: column;
+
+    align-items: center;
+    font-size: 2.5rem;
     gap: 3.5vh;
   }
 
